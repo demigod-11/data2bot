@@ -21,7 +21,7 @@ def clean_data(data : dict) -> dict:
     except Exception as e:
         raise e
 
-def hold_schema(dType):
+def hold_schema(dType: str) -> dict:
     '''
         holds schema of Json
     '''
