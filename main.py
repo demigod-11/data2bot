@@ -126,6 +126,7 @@ def run():
     cleaned_data = clean_data(dataset)
     WritetoJson(create_schema(cleaned_data), sink)
 
+    return 0
 
     
 
