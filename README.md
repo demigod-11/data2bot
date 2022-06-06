@@ -23,6 +23,9 @@ ARRAY: When the value in an array is another JSON object, the program should map
     - - type of <strong>False</strong> is interpreted as "boolean"
     - - type of <strong>{ "name" : "data2bot"}</strong> is interpreted as "object"
 
+<!-- PLEASE NOTE -->
+<!-- THERE IS A FUNCTION IN main.py THAT MAPS OUT ONLY TO THE PROPERTIES STATED IN PROBLEM.md i.e (STRING , NUMBER, INTEGER AND ENUM) HENCE THEY ARE TWO create_schema.py FUNCTIONS, IF THATS THE DESIRED OUTCOME KINDLY COMMENT OUT THE FUNCTION create_schema.py AND COMMENT THE FUNCTION create_schema.py BELOW IT -->
+
 # Calling the function
 - The program runs on the command line. Entry point is via main.py.
 - navigate to dir example <strong>cd python_engineer_experienced_professional</strong>
