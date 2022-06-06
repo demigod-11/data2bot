@@ -8,7 +8,7 @@ This program:
 - The program has no dependency save python >= 3.6 
 
 # Additional informations for test cases
-- - Padding: All attributes in the output JSON schema  are padded with "tag" : "" and "description" key/value
+- Padding: All attributes in the output JSON schema  are padded with "tag" : "" and "description" key/value
 - The output JSON schema sets all properties "required": false
 - The schema output captures ONLY the attributes within the "message" key of the input JSON source data. 
 - For data types of the JSON schema:
@@ -19,12 +19,12 @@ ARRAY: When the value in an array is another JSON object, the program should map
 
 ## EVERY Other valid JSON Data Type ( STRING, NUMBER, BOOLEAN, NULL, ARRAY (including empty arrays ([]), and JSON Objects))
 - All other valid JSON Data Types are interpreted as their corresponding JSON data type in the output schema type 
-    - - example the type of <strong>[]</strong> is interpreted as "array" 
-    - - type of <strong>False</strong> is interpreted as "boolean"
-    - - type of <strong>{ "name" : "data2bot"}</strong> is interpreted as "object"
+    - example the type of <strong>[]</strong> is interpreted as "array" 
+    - type of <strong>False</strong> is interpreted as "boolean"
+    - type of <strong>{ "name" : "data2bot"}</strong> is interpreted as "object"
 
-<!-- PLEASE NOTE -->
-<!-- THERE IS A FUNCTION IN main.py THAT MAPS OUT ONLY TO THE PROPERTIES STATED IN PROBLEM.md i.e (STRING , NUMBER, INTEGER AND ENUM) HENCE THEY ARE TWO create_schema.py FUNCTIONS, IF THATS THE DESIRED OUTCOME KINDLY COMMENT OUT THE FUNCTION create_schema.py AND COMMENT THE FUNCTION create_schema.py BELOW IT -->
+## PLEASE NOTE
+- THERE IS A FUNCTION IN main.py THAT MAPS OUT ONLY TO THE PROPERTIES STATED IN PROBLEM.md i.e (STRING , NUMBER, INTEGER AND ENUM) HENCE THEY ARE TWO create_schema.py FUNCTIONS, IF THATS THE DESIRED OUTCOME KINDLY COMMENT OUT THE FUNCTION create_schema.py AND COMMENT THE FUNCTION create_schema.py BELOW IT.
 
 # Calling the function
 - The program runs on the command line. Entry point is via main.py.
@@ -36,7 +36,7 @@ ARRAY: When the value in an array is another JSON object, the program should map
         - The path to the file as well as the extension name is not required e.g to dump result in <strong>./schema/output_src.json</strong> all we need is <strong>input_src</strong>
 
 ## Example Execution(main.py)
-- python main.py --source data_1 --sink schema_1
+- python <strong>main.py</strong> --source <strong>data_1</strong> --sink <strong>schema_1</strong>
 * loads file from <strong>/data/data_1.json</strong> dumps result in <strong>/schema/schema_1.json</strong>
 
 ## Example Execution(main_test.py)
