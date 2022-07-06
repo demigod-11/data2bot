@@ -31,32 +31,6 @@ def hold_schema(dType: str) -> dict:
         "description": "",
         "required": False}
 
-# comment out this code 
-# if requirement is specific to just STRING ARRAY ENUM and INTEGER 
-# then comment the create_schema function underneath this.
-
-
-# def create_schema(document : dict) -> dict:
-#     if type(document) != dict:
-#         raise Exception('')
-#     result = {}
-#     for key, val in document.items():
-#         if type(val) == str:
-#             result[key] = hold_schema('string')
-#         elif type(val) == int:
-#             result[key] = hold_schema('integer')
-        
-#         elif type(val) == list:
-#             if len(val) == 0:
-#                 pass
-#             elif type(val[0]) == str:
-#                 result[key] = hold_schema('enum')
-#             elif type(val[0]) == dict:
-#                 result[key] = hold_schema('array')
-            
-
-#     return result 
-
     
 def create_schema(document : dict) -> dict:
     '''
